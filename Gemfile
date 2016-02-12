@@ -53,6 +53,7 @@ gem 'omniauth-github'
 gem 'cancan'   # Authorisation
 
 gem 'sidekiq', '~> 4.1.0' # ActiveJob queue backend
+gem 'mailcatcher', group: :development  # To preview sent emails
 
 # Debugger
 gem 'pry'
