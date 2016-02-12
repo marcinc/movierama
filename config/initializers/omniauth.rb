@@ -7,3 +7,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     ENV.fetch('GITHUB_OAUTH_SECRET')
 end
 
+  configure do |c|
+    c.full_host = ENV.fetch('OMNIAUTH_FULL_HOST') if Rails.env.development?
+  end
+end
