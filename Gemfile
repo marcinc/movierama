@@ -52,6 +52,7 @@ gem 'omniauth' # Authentication
 gem 'omniauth-github'
 gem 'cancan'   # Authorisation
 
+gem 'sidekiq', '~> 4.1.0' # ActiveJob queue backend
 
 # Debugger
 gem 'pry'
