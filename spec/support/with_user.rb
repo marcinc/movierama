@@ -8,7 +8,8 @@ module RspecSupportWithUser
         :github,
         uid: '12345',
         info: {
-          name: 'John McFoo'
+          name: 'John McFoo',
+          email: 'john.mcfoo@example.com'
         }
       )
     end
