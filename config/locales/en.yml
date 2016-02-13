@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  user_mailer:
+    vote_cast_notification:
+      subject: "[MovieRama] You've received a new vote on \"%{title}\"."
+      body: 
+        hello: "Hi %{recipient_name}!"
+        content: "\"%{title}\" movie you submitted on MovieRama has received \"%{vote}\" vote from %{voting_user_name}."
+        thanks: "Thanks!"

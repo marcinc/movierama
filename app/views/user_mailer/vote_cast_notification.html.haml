@@ -1,0 +1,10 @@
+!!!
+%html
+  %body
+    = t('user_mailer.vote_cast_notification.body.hello', recipient_name: @recipient.name)
+    %br
+    %br
+    = t('user_mailer.vote_cast_notification.body.content', title: @movie.title, vote: @vote, voting_user_name: @voting_user.name)
+    %br
+    %br
+    = t('user_mailer.vote_cast_notification.body.thanks')
