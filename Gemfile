@@ -54,6 +54,7 @@ gem 'cancan'   # Authorisation
 
 gem 'sidekiq', '~> 4.1.0' # ActiveJob queue backend
 gem 'mailcatcher', group: :development  # To preview sent emails
+gem 'sinatra', :require => nil # Sidekiq web UI dependency
 
 # Debugger
 gem 'pry'

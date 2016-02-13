@@ -366,6 +366,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.3)
   sidekiq (~> 4.1.0)
+  sinatra
   timecop
   turbolinks
   uglifier (>= 1.3.0)

@@ -11,5 +11,11 @@ Rails.application.routes.draw do
     resources :movies, only: %(index), controller: 'movies'
   end
 
+  require 'sidekiq/web'
+  Sidekiq::Web.use Rack::Auth::Basic do |username, password|
+    username == ENV["SIDEKIQ_USERNAME"] && password == ENV["SIDEKIQ_PASSWORD"]
+  end if Rails.env.production?
+  mount Sidekiq::Web => '/sidekiq'
+
   root 'movies#index'
 end
