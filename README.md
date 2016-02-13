@@ -65,7 +65,25 @@ Login/signup use Omniauth with Github as a provider. If you're using Pow and the
 If not, you'll need to get your own OAuth tokens from Github and edit
 `.env` appropriately.
 
+#### Background jobs
 
+Email delivery relies on backgound job processor. To ensure email delivery start Sidekiq process with: 
+
+    $ foreman start
+
+`mailcatcher` has been added in development for easy email preview. Start all development processes with:
+
+    $ foreman start -f Procfile.dev
+
+#### Monitoring
+
+Sidekiq UI (require basic auth in production): 
+
+    $ https://movierama.dev/sidekiq
+
+Mailcatcher UI (development only):
+
+    $ http://127.0.0.1:1080
 
 ### Screenshot
 
