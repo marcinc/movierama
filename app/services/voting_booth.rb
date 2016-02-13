@@ -14,6 +14,7 @@ class VotingBooth
     unvote # to guarantee consistency
     set.add(@user)
     _update_counts
+    _notify_user(like_or_hate)
     self
   end
   
@@ -31,4 +32,9 @@ class VotingBooth
       liker_count: @movie.likers.size,
       hater_count: @movie.haters.size)
   end
+
+  def _notify_user(vote)
+    UserMailer.vote_cast_notification(@user.to_param, @movie.to_param, vote.to_s).deliver_later
+  end
+
 end
